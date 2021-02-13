@@ -11,7 +11,8 @@ $(document).ready(function () {
     //HTML Modal windows
     let testvar = 1111;
     const body = document.querySelector('.b');
-    const modal = document.querySelector('.overlay'); //почему-то криво работает закрытие, т.е. модальное окно закрывается при клике в лююбое место на экране!
+    const modal = document.querySelector('.overlay');
+    
     const LUpLink = document.querySelector('.ULeft');
     const LUContent = document.querySelector('.ULeftCnt');
     const RUpLink = document.querySelector('.URight');
@@ -23,8 +24,6 @@ $(document).ready(function () {
     const RDContent = document.querySelector('.DRightCnt');
 
     const CloseBtn = document.querySelectorAll('.modal_CBtn');
-
-
 
     function openModal(i) {
         if (i == LUpLink) {
