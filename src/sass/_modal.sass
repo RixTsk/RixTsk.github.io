@@ -1,0 +1,76 @@
+.modal
+    top: 0
+    display: none
+    position: fixed
+    width: 100vw
+    height: 100vh
+    background-color: rgba(0, 0, 0, 0.6)
+    z-index: 2
+    &_MContent
+        position: fixed
+        padding: 25px 25px 5px 25px
+        align-item: right
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 90vw
+        max-width: 934px
+        height: 96vh
+        background-color: #DFDFDF
+        overflow-y: scroll
+        hr
+            background-color: #FF0000
+            height: 3px
+    &_Screen
+        width: 100%
+        img
+            width: 100%
+    &_Subtitle
+        margin-top: 10px
+        font-weight: bold
+        font-size: 28px
+        line-height: 30px
+        color: #000000
+        text-transform: uppercase
+        text-align: center
+    &_Text
+        font-size: 18px
+    &_CBtn
+        display: block
+        margin: 10px auto
+        font-size: 20px
+        line-height: 10px
+        width: 120px
+        height: 50px
+        border-radius: 5px
+        border-color: #ad0000
+        cursor: pointer
+        &:hover
+            border-color: #ff0000
+            box-shadow: inset 0 2px 4px 1px rgba(255, 0, 0, 0.15)
+    span
+        font-size: 14px
+    &_YTCont
+        width: 100%
+        height: 100%
+        justify-content: center
+        align-items: center
+        position: fixed
+        background-color: transparent
+        z-index: 1
+    &_closeElement
+        position: fixed
+        top: 0
+        left: 0
+        width: 10000px
+        height: 10000px
+        background-color: transparent
+        z-index: -1
+    &_YTVideo
+        width: 800px
+        max-width: 100%
+        height: 470px
+        max-height: 100%
+
+.ULeftCnt, .URightCnt, .DLeftCnt, .DRightCnt, .BigLeft
+    display: none

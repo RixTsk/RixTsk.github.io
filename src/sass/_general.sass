@@ -1,0 +1,358 @@
+body
+    margin: 0
+    background-color: #000000
+
+h1
+    margin: 0
+    font-family: 'Ledger', serif
+    font-size: 28px
+    color: $MTextColor
+
+h2
+    margin: 5px 0 0 0
+    font-family: 'Ledger', serif
+    font-size: 22px
+    color: $MTextColor
+
+h3
+    font-family: 'Ledger', serif
+    font-size: 20px
+    color: $MTextColor
+    text-align: center
+
+a
+    color: #000000
+    transition: 0.3s all
+    @include linkColor
+
+.SwitchScroll
+    overflow: hidden
+
+.txt_s2type
+    font-size: 28px
+    margin: 65px 0 5px 0
+    text-transform: uppercase
+    color: #000000
+
+.txt_s3type
+    font-size: 22px
+    text-align: left
+    margin: 0
+    color: #000000
+
+.lowerSubtitle
+    margin-top: 20px
+
+.CColor
+    color: $MTextColor
+
+.container
+    display: block
+    margin: auto
+    max-width: 1200px
+    min-height: 220px
+
+.s2type
+    background-color: $SSectColor
+
+.MPage
+    min-height: 650px
+    &_Upper
+        display: block
+        position: relative
+        background: url('../Images/BG/BGElement_WLine_s1.jpg') center center/cover no-repeat
+        width: 100%
+        max-width: 1200px
+        height: 390px
+    &_Lower
+        display: flex
+        flex-direction: row
+        width: 100%
+        max-width: 934px
+        margin: 75px auto
+        align-items: center
+    &_LLower
+        max-width: 500px
+        text-align: left
+        font-size: 18px
+        color: $MTextColor
+    &_RLower
+        margin: 65px 0 0 350px
+        max-width: 84px
+        max-height: 84px
+    &_SIcons
+        display: flex
+        max-width: 84px
+        max-height: 84px
+
+.CommWeek
+    &_Cont
+        @include MainContent
+    &_BBlock
+        display: flex
+        flex-direction: row
+        justify-content: center
+        max-width: 934px
+        margin-top: 20px
+    &_snd-game
+        margin: 40px 0 50px 0
+    &_OShadow
+        width: 864px
+        padding: 10px
+        background-color: #DFDFDF
+        box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1)
+        &:hover
+            .CommWeek_DelGame
+                background-color: #FF0000
+                box-shadow: inset 0 1px 4px 1px rgba(0, 0, 0, 0.1)
+    &_PGame
+        display: flex
+        max-width: 850px
+        padding: 8px 0 8px 8px
+        background-color: #DFDFDF
+        box-shadow: inset 0 4px 4px 1px rgba(0, 0, 0, 0.15)
+    &_Poster
+        max-width: 310px
+        max-height: 184px
+    &_DGame
+        display: flex
+        flex-direction: column
+        width: 100%
+        padding: 0 0 0 55px
+    &_TGame
+        font-size: 22px
+        color: #000000
+        text-transform: uppercase
+    &_DelGame
+        width: 100%
+        height: 5px
+        transition: 0.3s all
+        background-color: #FF0000
+        box-shadow: inset 0 2px 4px 1px rgba(0, 0, 0, 0.5)
+    &_TxtGame
+        max-width: 422px
+        margin-top: 10px
+        font-size: 16px
+        line-height: 20px
+        color: #000000
+    &_SBlock
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 70px
+        height: 120px
+        background-color: #DFDFDF
+
+.CoopProj
+    &_Cont
+        @include MainContent
+    &_NBlock
+        display: block
+        align-items: center
+        margin: 15px 0 50px 0
+        height: 510px
+    &_NLine
+        display: flex
+        flex-direction: row
+        max-height: 255px
+    &_NCont
+        height: 255px
+    &_NCDescr
+        position: relative
+        width: 100%
+        max-height: 255px
+        padding: 5px
+        background-color: #1F1F1F
+        font-weight: normal
+        font-size: 18px
+        color: #FFFFFF
+    &_NTitle
+        margin: 5px
+        line-height: 20px
+    &_Paragraph
+        overflow: hidden
+        text-overflow: ellipsis
+        max-height: 150px
+        margin: 5px 0 0 0
+        line-height: 22px
+    &_linkNews
+        position: absolute
+        bottom: 15px
+        color: $MTextColor
+        transition: 0.3s all
+        text-decoration: underline
+        cursor: pointer
+        &:hover
+            color: red
+
+.IntMat
+    &_Cont
+        @include MainContent
+    &_VCont
+        display: flex
+        flex-direction: row
+        margin: 5px 0 50px 0
+        width: 934px
+    &_UElement
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+    &_LElements
+        margin-top: 25px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+    &_YTBtn
+        position: absolute
+        left: 50%
+        top: 50%
+        margin-left: -34px
+        margin-top: -24px
+        width: 68px
+        height: 48px
+        background-color: rgba(0, 0, 0, 0.7)
+        border-radius: 10px/20px
+        &_Triangle
+            position: absolute
+            top: 50%
+            left: 50%
+            margin-left: -6px
+            margin-top: -11px
+            border-left: 19px solid #fff
+            border-top: 11px solid transparent
+            border-bottom: 11px solid transparent
+    &_LIcon
+        display: block
+        position: relative
+        width: 452px
+        height: 406px
+        border-radius: 15px
+        background: url('../Images/s4_videoblock/RoN_B.jpg') center center/cover no-repeat
+        cursor: pointer
+        &:hover
+            box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, 0.5)
+            .IntMat_YTBtn
+                background-color: rgb(255, 0, 0)
+                transition: 0.3s all
+
+    &_RIcons
+        margin-left: 30px
+        display: flex
+        flex-direction: column
+    &_VSIcon
+        width: 211px
+        height: 191px
+        cursor: pointer
+        &:hover
+            box-shadow: inset 0 0 100px 10px rgba(0, 0, 0, 0.5)
+            .IntMat_YTBtn
+                background-color: rgb(255, 0, 0)
+                transition: 0.3s all
+        &_rElement
+            margin-left: 30px
+        &_UpL
+            position: relative
+            border-radius: 15px
+            background: url('../Images/s4_videoblock/EFT_S.jpg') center center/cover no-repeat
+        &_UpR
+            position: relative
+            border-radius: 15px
+            background: url('../Images/s4_videoblock/GK_S.jpg') center center/cover no-repeat
+        &_DnL
+            position: relative
+            border-radius: 15px
+            background: url('../Images/s4_videoblock/FC6_S.jpg') center center/cover no-repeat
+        &_DnR
+            position: relative
+            border-radius: 15px
+            background: url('../Images/s4_videoblock/SF_S.jpg') center center/cover no-repeat
+
+.foot
+    padding: 10px 0 0 0
+    min-height: 150px
+    max-width: 934px
+    display: flex
+    justify-content: space-between
+    &_txt
+        font-size: 16px
+        font-family: 'Ledger', serif
+        color: $MTextColor
+    &_ALink
+        font-size: 16px
+        transition: 0.3s all
+        @include linkColor
+    &_ILink
+        width: 32px
+        height: 32px
+    &_SContact
+        display: flex
+        justify-content: space-between
+        width: 175px
+
+.delimiter
+    width: 100%
+    max-width: 1200px
+    height: 50px
+    margin: auto
+    &_type1
+        background: url('../Images/BG/BetweenSection_T1.jpg') center center/cover no-repeat
+        height: 100%
+    &_type2
+        background: url('../Images/BG/BetweenSection_T2.jpg') center center/cover no-repeat
+        height: 100%
+
+.icon
+    width: 32px
+    height: 32px
+    transition: 0.3s all
+    &:hover
+        transform: rotateZ(10deg)
+
+.snd_social
+    max-height: 64px
+    z-index: 1
+
+.right-element
+    margin-left: 20px
+
+.down-element
+    margin-top: 20px
+
+.owl
+    &-carousel
+        margin-top: 5px
+    &-loaded
+        justify-content: center
+        align-items: center
+    &-next
+        transition: 0.3s all
+        position: absolute
+        right: 15px
+        width: 42px
+        height: 42px
+        transform: translateY(-50%)
+        background: url('../Icons/s4_RightArrow.svg')
+        span
+            display: none
+    &-prev
+        transition: 0.3s all
+        position: absolute
+        left: 15px
+        width: 42px
+        height: 42px
+        transform: translateY(-50%)
+        background: url('../Icons/s4_LeftArrow.svg')
+        span
+            display: none
+    &-dots
+        position: absolute
+        bottom: 10px
+        text-align: center
+    &-dot
+        background: transparent
+
+.imgVideoCont
+    border-radius: 15px
