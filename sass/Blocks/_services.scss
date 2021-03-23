@@ -1,0 +1,78 @@
+.Services{
+    padding: 30px 0 60px 0;
+    &__title{
+        margin-top: 0;
+        color: $MainTextColor;
+        font-style: normal;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__subtitle{
+        display: flex;
+        flex-direction: row;
+        padding-left: 20px;
+        text-transform: uppercase;
+        &_name{
+            margin-left: 10px;
+        }
+    }
+    &__descr{
+        display: block;
+        margin: 20px 0 0 20px;
+        padding: 10px;
+        width: 630px;
+        height: 540px;
+        background-color: $LightColor;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: $MainTextColor;
+        box-shadow: inset 0 2px 4px rgba($color: #000000, $alpha: 0.5);
+        &_text{
+            margin: 0;
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    &__info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__item{
+        display: block;
+        width: 70px;
+        height: 650px;
+        background-color: $MainColor;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    &__packet{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    &_active{
+        transition: 0.3s all;
+        width: 690px;
+    }
+    &_passive{
+        transition: 0.3s all;
+        &:hover{
+        cursor: pointer;
+        .Services__subtitle_name {
+            transition: 0.3s all;
+            color: $LinkColor;
+          }
+        }
+        .Services__subtitle {
+          transform: rotateZ(270deg);
+          margin: 0;
+          margin-top: 560px;
+          white-space: nowrap;
+        }
+        .Services__descr{
+            display: none;
+        }
+    }
+}

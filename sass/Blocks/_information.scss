@@ -1,0 +1,49 @@
+.Information {
+  padding: 30px 0 60px 0;
+  &__title {
+    margin-top: 0;
+    color: $MainTextColor;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(295px, auto));
+    grid-template-rows: repeat(2, minmax(295px, auto));
+    gap: 25px;
+  }
+  &__item {
+    background-color: $MainColor;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &_img {
+      margin-top: 10px;
+      opacity: 0.5;
+      transition: 0.3s all;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: $LightColor;
+      .Information__infoLinks {
+        color: $LinkColor;
+      }
+      .Information__item_img {
+        opacity: 1;
+      }
+    }
+  }
+  &__infoLinks {
+    color: $DarkColor;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    transition: 0.3s all;
+  }
+}

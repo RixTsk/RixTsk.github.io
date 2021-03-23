@@ -1,0 +1,33 @@
+.owl-next{
+    width: 15px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: url('../icons/Arrows/chevron-right-solid.svg') center center/cover no-repeat;
+    span{
+        display: none;
+    }
+}
+.owl-prev{
+    width: 15px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: url('../icons/Arrows/chevron-left-solid.svg') center center/cover no-repeat;
+    span{
+        display: none;
+    }
+}
+.owl-dot{
+    background-color: transparent;
+}
+.owl-dots{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}

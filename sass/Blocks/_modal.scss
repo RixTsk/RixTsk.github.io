@@ -1,0 +1,66 @@
+  .Overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+  
+  .Modal {
+      &__article1{
+        display: none;
+    }
+      &__article2{
+        display: none;
+    }
+      &__article3{
+        display: none;
+    }
+      &__article4{
+        display: none;
+    }
+      &__article5{
+        display: none;
+    }
+      &__article6{
+          display: none;
+      }
+    &__information {
+      padding: 0 20px 0 20px;
+      position: fixed;
+      top: 0;
+      max-width: 75%;
+      height: 100%;
+      background-color: #f1f1f1;
+      align-items: center;
+      overflow-y: scroll;
+      z-index: 10;
+    }
+    &__image {
+      width: 100%;
+      height: auto;
+      &_pic {
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+      }
+    }
+    &__title {
+      text-align: center;
+      font-size: 38px;
+      line-height: 20px;
+    }
+    &__descr {
+      text-align: center;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &__contactForm{
+        display: none;
+    }
+  }
+  
