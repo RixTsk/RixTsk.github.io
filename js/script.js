@@ -90,6 +90,10 @@ $(document).ready(function () {
 
     const overlay = document.querySelector('.Overlay')
     const body = document.querySelector('.b')
+    const cont = document.querySelectorAll('.container')
+    const mCont = document.querySelector('.Menu__container')
+    const faqCont = document.querySelector('.FAQ')
+
     const closeBtn = document.querySelectorAll('.Modal__closeBtn')
     const contClose = document.querySelectorAll('.Contact__close')
     const orderBtn = document.querySelector('.FScreen__button')
@@ -99,37 +103,37 @@ $(document).ready(function () {
         if (i == article1_In) {
             i.addEventListener('click', () => {
                 overlay.style.display = 'flex';
-                article1_Out.style.display = 'block';
+                article1_Out.style.display = 'flex';
                 body.classList.add('b_active');
             });
         } else if (i == article2_In) {
             i.addEventListener('click', () => {
                 overlay.style.display = 'flex';
-                article2_Out.style.display = 'block';
+                article2_Out.style.display = 'flex';
                 body.classList.add('b_active');
             });
         } else if (i == article3_In) {
             i.addEventListener('click', () => {
                 overlay.style.display = 'flex';
-                article3_Out.style.display = 'block';
+                article3_Out.style.display = 'flex';
                 body.classList.add('b_active');
             });
         } else if (i == article4_In) {
             i.addEventListener('click', () => {
                 overlay.style.display = 'flex';
-                article4_Out.style.display = 'block';
+                article4_Out.style.display = 'flex';
                 body.classList.add('b_active');
             });
         } else if (i == article5_In) {
             i.addEventListener('click', () => {
                 overlay.style.display = 'flex';
-                article5_Out.style.display = 'block';
+                article5_Out.style.display = 'flex';
                 body.classList.add('b_active');
             });
         } else if (i == article6_In) {
             i.addEventListener('click', () => {
                 overlay.style.display = 'flex';
-                article6_Out.style.display = 'block';
+                article6_Out.style.display = 'flex';
                 body.classList.add('b_active');
             });
         } else if (i == orderBtn) {
@@ -137,24 +141,42 @@ $(document).ready(function () {
                 overlay.style.display = 'flex';
                 contactForm.style.display = 'block';
                 body.classList.add('b_active');
+
+                for (let i = 0; i < cont.length; i++) {
+                    cont[i].classList.add('blurX3')
+                };
+                mCont.classList.add('blurX3');
+                faqCont.classList.add('blurX3');
             });
         } else if (i == contactBtn) {
             i.addEventListener('click', () => {
                 overlay.style.display = 'flex';
                 contactField.style.display = 'flex';
                 body.classList.add('b_active');
+
+                for (let i = 0; i < cont.length; i++) {
+                    cont[i].classList.add('blurX3')
+                };
+                mCont.classList.add('blurX3');
+                faqCont.classList.add('blurX3');
             });
         } else if (i == smallMenu) {
             i.addEventListener('click', () => {
                 overlay.style.display = 'flex';
                 contactField.style.display = 'flex';
                 body.classList.add('b_active');
+
+                for (let i = 0; i < cont.length; i++) {
+                    cont[i].classList.add('blurX3')
+                };
+                mCont.classList.add('blurX3');
+                faqCont.classList.add('blurX3');
             });
         }
     }
 
-    function closeModal(i) {
-        i.addEventListener('click', () => {
+    function closeModal(j) {
+        j.addEventListener('click', () => {
             overlay.style.display = 'none';
             article1_Out.style.display = 'none';
             article2_Out.style.display = 'none';
@@ -165,31 +187,44 @@ $(document).ready(function () {
             contactForm.style.display = 'none';
             contactField.style.display = 'none';
             body.classList.remove('b_active');
+
+            for (let i = 0; i < cont.length; i++) {
+                cont[i].classList.remove('blurX3')
+            };
+            mCont.classList.remove('blurX3');
+            faqCont.classList.remove('blurX3');
         });
     }
 
     openModal(article1_In);
-    openModal(article2_In);
+    //открывать по мере добавления статей
+    /* openModal(article2_In);
     openModal(article3_In);
     openModal(article4_In);
     openModal(article5_In);
-    openModal(article6_In);
+    openModal(article6_In); */
     openModal(orderBtn);
     openModal(contactBtn);
     openModal(smallMenu);
 
-
+    //Need create one function for this action
     closeModal(closeBtn[0]);
     closeModal(closeBtn[1]);
     closeModal(closeBtn[2]);
     closeModal(closeBtn[3]);
     closeModal(closeBtn[4]);
     closeModal(closeBtn[5]);
+    closeModal(closeBtn[6]);
+    closeModal(closeBtn[7]);
+    closeModal(closeBtn[8]);
+    closeModal(closeBtn[9]);
+    closeModal(closeBtn[10]);
+    closeModal(closeBtn[11]);
     closeModal(contClose[0]);
     closeModal(contClose[1]);
 
     /*Smooth scroll and page Up */
-    //scroll
+    //scroll button visible
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1000) {
             $('.pageup').fadeIn('slow');
@@ -197,7 +232,7 @@ $(document).ready(function () {
             $('.pageup').fadeOut('slow');
         }
     });
-    //Menu button viisble
+    //Menu button visible
     $(window).scroll(function () {
         if ($(this).scrollTop() > 800) {
             $('.SmallMenu').fadeIn('slow');
@@ -208,7 +243,6 @@ $(document).ready(function () {
     //Menu button click func
     const SMLink = document.querySelectorAll('.SmallMenu_closer')
     $('.SmallMenu__Hamburger').click(function () {
-        /* $('.SmallMenu__list').fadeIn('slow'); */
         $('.SmallMenu__Hamburger').toggleClass('SmallMenu_activeH');
         $('.SmallMenu__list').toggleClass('SmallMenu__list_activeL');
     });
