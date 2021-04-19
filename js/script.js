@@ -269,4 +269,34 @@ $(document).ready(function () {
         return false;
     });
 
+    //form settings with Ajax
+    //order form
+    $('#orderForm').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smartOrder.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+
+            $('form').trigger("reset");
+        });
+        return false;
+    })
+
+    //contact form
+    $('#contactForm').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smartContact.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+
+            $('form').trigger("reset");
+        });
+        return false;
+    })
 });

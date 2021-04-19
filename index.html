@@ -72,15 +72,15 @@
                 <img src="images/FScreenHelp.svg" alt="help point image">
             </div>
             <div class="FScreen__sputnikUp">
-                <img src="images/FScreenSputnikUp.png" alt="new site sputnik up">
-                <a href="#faq"><img class="FScreen__sputnikUp_faq" src="images/FScreenSputnikUp_mes.svg" alt="sputnik message F.A.Q."></a>
+                <img src="images/FScreenSputnikUp.png" alt="sputnik up">
+                <a href="#faq"><img class="FScreen__sputnikUp_faq" src="images/FScreenSputnikUp_mes.svg" alt="F.A.Q. message"></a>
             </div>
         </div>
         <div class="FScreen__lowerPart">
                 <button class="FScreen__button">Заказать сайт</button>
             <div class="FScreen__sputnikDown">
-                <img src="images/FScreenSputnikDown.png" alt="new site sputnik down">
-                <a href="#prices"><img class="FScreen__sputnikDown_price" src="images/FScreenSputnikDown_mes.svg" alt="sputnik message Price"></a>
+                <img src="images/FScreenSputnikDown.png" alt="sputnik down">
+                <a href="#prices"><img class="FScreen__sputnikDown_price" src="images/FScreenSputnikDown_mes.svg" alt="Price message"></a>
             </div>
         </div>
     </div>
@@ -883,11 +883,10 @@
         <div class="Contact__form">
             <h2 class="Contact__subtitle">Заявка на разработку сайта</h2>
             <div class="Contact__close">&times;</div>
-            <form class="Contact__form_main" action="#">
+            <form id="orderForm" class="Contact__form_main" action="#">
                 <input class="Contact__item" name="name" required placeholder="Ваше имя" type="text">
                 <input class="Contact__item" name="email" required placeholder="Ваш E-mail" type="email">
-                <textarea style="resize: none;" class="Contact__item Contact__item_comment" name="comment" required placeholder="Комментарий">
-                </textarea>
+                <textarea required style="resize: none;" class="Contact__item Contact__item_comment" name="comment" placeholder="Напишите Ваш Комментарий вопрос или запрос, пожелания или еще какую крутую штуку :)"></textarea>
 
                 <button class="Contact__button button_submit">Отправить заявку</button>
             </form>
@@ -925,11 +924,10 @@
             <div class="Contact__field_form">
                 <h2 class="Contact__subtitle">Контактная форма</h2>
                 <div class="Contact__close Contact__close_field">&times;</div>
-                <form class="Contact__field_main" action="#">
-                    <input class="Contact__item" name="name" required placeholder="Ваше имя" type="text">
-                    <input class="Contact__item" name="email" required placeholder="Ваш E-mail" type="email">
-                    <textarea style="resize: none;" class="Contact__item Contact__item_comment" name="comment" required placeholder="Комментарий">
-                    </textarea>
+                <form id="contactForm" class="Contact__field_main" action="#">
+                    <input class="Contact__item" name="nameF" required placeholder="Ваше имя" type="text">
+                    <input class="Contact__item" name="emailF" required placeholder="Ваш E-mail" type="email">
+                    <textarea style="resize: none;" class="Contact__item Contact__item_comment" name="commentF" required placeholder="Комментарий"></textarea>
     
                     <button class="Contact__button button_submit">Отправить</button>
                 </form>
